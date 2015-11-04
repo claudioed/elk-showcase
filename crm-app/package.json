@@ -1,0 +1,24 @@
+{
+  "name": "crm-app",
+  "version": "1.0.0",
+  "description": "CRM App for ELK showcase",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "crm",
+    "elk",
+    "logstash",
+    "kibana",
+    "elasticsearch",
+    "docker"
+  ],
+  "author": "Claudio E. de Oliveira <claudioed.oliveira@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "bunyan": "^1.5.1",
+    "express": "^4.13.3"
+  }
+}
