@@ -8,7 +8,7 @@ var log = bunyan.createLogger({
     name: 'crm-app',
     streams: [{
         type: 'rotating-file',
-        path: '/home/claudio/dev/pratice-docker/elk-showcase/crm-app/logs/crm-app.log',
+        path: '/var/logs/crm-app.log',
         period: '1d',
         count: 10
     }]
@@ -20,4 +20,4 @@ logger.info = function(json,operation){
   log.info(json,operation);
 };
 
-module.exports = logger;
+module.exports = gitlogger;

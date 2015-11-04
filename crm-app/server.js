@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // Port setup
-var port = process.env.PORT || 8080;
+var port = process.env.PORT || 3000;
 
 var router = express.Router();
 

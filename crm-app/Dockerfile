@@ -7,7 +7,11 @@ MAINTAINER Claudio Eduardo de Oliveira
 WORKDIR /crm-app
 ADD . /crm-app
 
+# Expose port 3000
 EXPOSE 3000
+
+# Create Logs folder
+RUN mkdir /var/logs
 
 # Install node dependencies
 RUN npm install

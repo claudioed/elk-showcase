@@ -1,13 +1,13 @@
-application:
+crmapplication:
   build: .
-  command: npm start
-  ports:
-    - "8080"
+  command: node server.js
+  expose:
+    - "3000:3000"
     
 nginx:
+  restart: always
   build: ./conf/nginx
   links:
-      - application:application
+      - crmapplication:crmapplication
   ports:
     - "80:80"
-  
