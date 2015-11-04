@@ -21,5 +21,13 @@ EXPOSE 3000
 # Create Logs folder
 RUN mkdir /var/logs
 
+RUN rm -f /etc/logstash-forwarder.conf
+
+COPY conf/logstash-forwarder/logstash-forwarder.conf /etc/logstash-forwarder.conf
+
+# Run lumberjack
+RUN service logstash-forwarder stop \
+    && service logstash-forwarder start
+
 # Install node dependencies
 RUN npm install

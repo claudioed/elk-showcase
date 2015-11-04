@@ -3,6 +3,9 @@ crmapplication:
   command: node server.js
   expose:
     - "3000:3000"
+  volumes_from:
+    - configuration
+
     
 nginx:
   restart: always
@@ -11,3 +14,9 @@ nginx:
       - crmapplication:crmapplication
   ports:
     - "80:80"
+
+configuration:
+  image: busybox
+  volumes:
+    - conf/logstash-forwarder:/config-dir
+    - ./home/claudio/workspace/pratice-docker/elk-showcase/certs:/etc/ssl
