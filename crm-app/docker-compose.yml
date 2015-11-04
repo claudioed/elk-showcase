@@ -1,0 +1,13 @@
+application:
+  build: .
+  command: npm start
+  ports:
+    - "8080"
+    
+nginx:
+  build: ./conf/nginx
+  links:
+      - application:application
+  ports:
+    - "80:80"
+  
