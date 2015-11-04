@@ -20,4 +20,4 @@ logger.info = function(json,operation){
   log.info(json,operation);
 };
 
-module.exports = gitlogger;
+module.exports = logger;
