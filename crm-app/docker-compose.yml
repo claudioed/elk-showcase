@@ -6,7 +6,6 @@ crmapplication:
   volumes_from:
     - configuration
 
-    
 nginx:
   restart: always
   build: ./conf/nginx
@@ -19,4 +18,6 @@ configuration:
   image: busybox
   volumes:
     - conf/logstash-forwarder:/config-dir
-    - ./home/claudio/workspace/pratice-docker/elk-showcase/certs:/etc/ssl
+    - conf/certs:/certs
+
+
